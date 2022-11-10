@@ -62,6 +62,7 @@ swip.addEventListener("touchstart", function (e) {
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
     }
 
     touch.go = true;
@@ -74,8 +75,10 @@ swip.addEventListener("touchmove", function (e) {
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
     }
 
+    touch.go = true;
     touch.move = e.touches[0].clientY;
 })
 
@@ -115,31 +118,43 @@ function swipe(rm) {
 }
 
 window.addEventListener("touchmove", function (e) {
-    e.preventDefault();
+
+    if (e.cancelable) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+    }
 
     if (touch.go) {
         swipe()
         touch.move = e.changedTouches[0].clientY;
     }
-    return 0;
+
 })
 
+document.addEventListener("touchmove", function(e){e.preventDefault()})
+
 window.addEventListener("touchend", function (e) {
-    touch.go = false;
-    swipe(true)
+
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
     }
-    return 0;
+
+    touch.go = false;
+    swipe(true)
+
 })
 
 window.addEventListener("touchcancill", function (e) {
-    touch.go = false;
-    swipe(true)
+    
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
     }
-    return 0;
+
+    touch.go = false;
+    swipe(true)
 })
