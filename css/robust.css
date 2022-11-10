@@ -152,7 +152,7 @@
 
 /* Down class */
 .down {
-    bottom: -100%;
+    bottom: -100% !important;
     transition: all .3s ease;
 }
 
@@ -268,7 +268,7 @@
 }
 
 .swip:hover {
-    background: rgba(36, 43, 82, 0.63);  
+    background: rgba(36, 43, 82, 0.63);
 }
 
 
