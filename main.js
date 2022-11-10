@@ -77,15 +77,17 @@ function swipe(rm) {
     let position = steps.getBoundingClientRect().top
     if (touch.go) {
         if (touch.start <= touch.move) {
-            steps.style.transition = "none";
-            steps.style.transform = `translateY(${Math.floor(touch.move - position)}px)`
+            // steps.style.transition = "none";
+            console.log(Math.floor(touch.move - position))
+            steps.style.bottom = `-${Math.floor(touch.move - position)}px`;
+            console.log(`-${Math.floor(touch.move - position)}px`)
         } else {
-            steps.style.transition = ".5s ease"
-            steps.style.transform = `translateY(0px)`
+            // steps.style.transition = ".5s ease"
+            // steps.style.transform = `translateY(0px)`
         }
     } else {
-        steps.style.transition = ".5s ease"
-        steps.style.transform = `translateY(0px)`
+        // steps.style.transition = ".5s ease"
+        // steps.style.transform = `translateY(0px)`
     }
 
     if (rm) {
@@ -94,8 +96,8 @@ function swipe(rm) {
             shaodw.style.display = "none";
             document.body.style.overflow = "auto";
         } else {
-            steps.style.transition = ".5s ease"
-            steps.style.transform = `translateY(0px)`
+            // steps.style.transition = ".5s ease"
+            // steps.style.transform = `translateY(0px)`
         }
         touch.go = false;
         touch.start = 0;
@@ -111,7 +113,6 @@ window.addEventListener("touchmove", function (e) {
         touch.move = e.changedTouches[0].clientY;
 
     }
-    console.log(e)
 
 })
 

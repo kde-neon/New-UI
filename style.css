@@ -59,6 +59,8 @@ body {
 .step {
     height: 75vh;
     padding-top: 20px;
+    left: 0;
+    bottom: 0;
     background: #F5F7FB;
     border-radius: 32px 32px 0px 0px;
 }
