@@ -39,7 +39,6 @@ function frame_click(e) {
 // Mobiel device toush controll
 let touch = {
     go: false,
-    index: 0,
     start: 0,
     move: 0,
     end: 0,
@@ -47,63 +46,56 @@ let touch = {
 
 
 let swip = document.querySelectorAll(".swip");
-let steps = document.querySelectorAll(".step");
+let steps = document.querySelector(".step");
 
 function show_step() {
     shaodw.style.display = "block";
-    steps[0].classList.remove("down");
+    steps.classList.remove("down");
     document.body.style.overflow = "hidden";
 }
 
-// Swipe areat on stouch and move
-swip.forEach((el, i) => {
+// swipe areat on stouch and move
 
-    el.addEventListener("touchstart", function (e) {
-        if (e.cancelable) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
 
-        touch.index = i;
-        touch.go = true;
-        touch.start = e.touches[0].clientY;
-    })
+steps.addEventListener("touchstart", function (e) {
+    // if (e.cancelable) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }
 
-    el.addEventListener("touchmove", function (e) {
-        if (e.cancelable) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-        touch.move = e.touches[0].clientY;
-    })
-
+    touch.go = true;
+    touch.start = e.touches[0].clientY;
 })
 
-// Swipe step card on touchscreen device
-function Swipe(rm) {
-    let el = steps[touch.index]
-    let position = steps[touch.index].getBoundingClientRect().top
+steps.addEventListener("touchmove", function (e) {
+    touch.move = e.touches[0].clientY;
+})
+
+
+// swipe step card on touchscreen device
+function swipe(rm) {
+    let position = steps.getBoundingClientRect().top
     if (touch.go) {
         if (touch.start < touch.move) {
-            el.style.transition = "none";
-            el.style.transform = `translateY(${Math.floor(touch.move - position)}px)`
+            steps.style.transition = "none";
+            steps.style.transform = `translateY(${Math.floor(touch.move - position)}px)`
         } else {
-            el.style.transition = ".5s ease"
-            el.style.transform = `translateY(0px)`
+            steps.style.transition = ".5s ease"
+            steps.style.transform = `translateY(0px)`
         }
     } else {
-        el.style.transition = ".5s ease"
-        el.style.transform = `translateY(0px)`
+        steps.style.transition = ".5s ease"
+        steps.style.transform = `translateY(0px)`
     }
 
     if (rm) {
         if ((touch.start * 2) < touch.move && touch.go === false) {
-            el.classList.add("down")
+            steps.classList.add("down")
             shaodw.style.display = "none";
             document.body.style.overflow = "auto";
         } else {
-            el.style.transition = ".5s ease"
-            el.style.transform = `translateY(0px)`
+            steps.style.transition = ".5s ease"
+            steps.style.transform = `translateY(0px)`
         }
         touch.go = false;
         touch.start = 0;
@@ -115,21 +107,20 @@ function Swipe(rm) {
 window.addEventListener("touchmove", function (e) {
 
     if (touch.go) {
-        if (e.cancelable) {
-            e.preventDefault();
-        }
-        Swipe()
+        swipe()
         touch.move = e.changedTouches[0].clientY;
+
     }
+    console.log(e)
 
 })
 
-window.addEventListener("touchend", function (e) {
+window.addEventListener("touchend", function () {
     touch.go = false;
-    Swipe(true)
+    swipe(true)
 })
 
-window.addEventListener("touchcancill", function (e) {
+window.addEventListener("touchcancill", function () {
     touch.go = false;
-    Swipe(true)
+    swipe(true)
 })
