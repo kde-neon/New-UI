@@ -58,7 +58,7 @@ function show_step() {
 
 
 swip.addEventListener("touchstart", function (e) {
-    
+
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
@@ -70,7 +70,7 @@ swip.addEventListener("touchstart", function (e) {
 })
 
 swip.addEventListener("touchmove", function (e) {
-    
+
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
@@ -118,12 +118,13 @@ window.addEventListener("touchmove", function (e) {
 
     e.preventDefault();
     e.stopPropagation();
- 
+
 
     if (touch.go) {
         swipe()
         touch.move = e.changedTouches[0].clientY;
     }
+    return false;
 
 })
 
@@ -134,6 +135,7 @@ window.addEventListener("touchend", function (e) {
         e.preventDefault();
         e.stopPropagation();
     }
+    return false;
 })
 
 window.addEventListener("touchcancill", function (e) {
@@ -143,4 +145,5 @@ window.addEventListener("touchcancill", function (e) {
         e.preventDefault();
         e.stopPropagation();
     }
+    return false;
 })
