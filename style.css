@@ -94,3 +94,62 @@ body {
     display: none;
     background: #000000;
 }
+
+/* Responsive large device */
+@media only screen and (min-width: 651px) {
+
+    /* sugation */
+    .sugation {
+        top: 0;
+        right: 0px;
+        border-radius: 0;
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        position: relative;
+    }
+
+    /* Dashboard */
+    .dashboard {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .step {
+        top: 0px;
+        left: 0px;
+        width: 90%;
+        position: relative;
+        height: fit-content;
+        max-width: 463px;
+        overflow-x: hidden;
+        background: #F5F7FB;
+        border-radius: 0 !important;
+    }
+
+    .ovx-a {
+        overflow-x: hidden;
+    }
+
+    .poster {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 24px;
+        width: 304.75px;
+        height: 368px;
+
+        background: #FFFFFF;
+        border-radius: 12px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+    }
+}

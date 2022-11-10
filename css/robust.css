@@ -51,10 +51,16 @@
     justify-content: space-evenly;
 }
 
+/* Justify content */
+.jcfe {
+    justify-content: flex-end;
+}
+
 /* Flex direction column */
 .fdc {
     flex-direction: column;
 }
+
 
 /* Overflow */
 .ovx-a {
@@ -154,6 +160,14 @@
 .down {
     bottom: -100% !important;
     transition: all .3s ease;
+}
+
+/* Large screen display none */
+
+@media only screen and (min-width: 651px) {
+    .L-dn {
+        display: none !important;
+    }
 }
 
 /* Title */
@@ -268,7 +282,7 @@
 }
 
 .swip:hover {
-    background: rgba(36, 43, 82, 0.63);
+    background: rgba(36, 43, 82, 0.63);  
 }
 
 
