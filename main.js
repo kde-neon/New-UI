@@ -113,12 +113,13 @@ function swipe(rm) {
 
 window.addEventListener("touchmove", function (e) {
 
+    if (e.cancelable) {
+        e.preventDefault();
+    }
+
     if (touch.go) {
         swipe()
         touch.move = e.changedTouches[0].clientY;
-        if (e.cancelable) {
-            e.preventDefault();
-        }
     }
 
 })
