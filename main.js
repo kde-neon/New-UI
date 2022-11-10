@@ -79,15 +79,15 @@ function swipe(rm) {
         if (touch.start <= touch.move) {
             // steps.style.transition = "none";
             console.log(Math.floor(touch.move - position))
-            steps.style.bottom = `-${Math.floor(touch.move - position)}px`;
+            steps.style.bottom = `-${Math.floor((touch.move - position) * 5)}px`;
             console.log(`-${Math.floor(touch.move - position)}px`)
         } else {
-            // steps.style.transition = ".5s ease"
-            // steps.style.transform = `translateY(0px)`
+            steps.style.transition = ".3s ease";
+            steps.style.bottom = `0px`;
         }
     } else {
-        // steps.style.transition = ".5s ease"
-        // steps.style.transform = `translateY(0px)`
+        steps.style.transition = ".3s ease"
+        steps.style.bottom = `0px`
     }
 
     if (rm) {
@@ -96,8 +96,8 @@ function swipe(rm) {
             shaodw.style.display = "none";
             document.body.style.overflow = "auto";
         } else {
-            // steps.style.transition = ".5s ease"
-            // steps.style.transform = `translateY(0px)`
+            steps.style.transition = ".3s ease"
+            steps.style.bottom = `0px`
         }
         touch.go = false;
         touch.start = 0;
