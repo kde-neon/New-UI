@@ -122,7 +122,6 @@ window.addEventListener("touchmove", function (e) {
         touch.move = e.changedTouches[0].clientY;
     }
     return 0;
-
 })
 
 window.addEventListener("touchend", function (e) {
