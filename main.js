@@ -45,7 +45,7 @@ let touch = {
 }
 
 
-let swip = document.querySelectorAll(".swip");
+let swip = document.querySelector(".swip");
 let steps = document.querySelector(".step");
 
 function show_step() {
@@ -57,7 +57,7 @@ function show_step() {
 // swipe areat on stouch and move
 
 
-steps.addEventListener("touchstart", function (e) {
+swip.addEventListener("touchstart", function (e) {
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
@@ -65,31 +65,33 @@ steps.addEventListener("touchstart", function (e) {
 
     touch.go = true;
     touch.start = e.touches[0].clientY;
+
 })
 
-steps.addEventListener("touchmove", function (e) {
+swip.addEventListener("touchmove", function (e) {
     if (e.cancelable) {
         e.preventDefault();
     }
+
     touch.move = e.touches[0].clientY;
 })
 
 
 // swipe step card on touchscreen device
 function swipe(rm) {
+    console.log(touch.go)
     let position = steps.getBoundingClientRect().top
     if (touch.go) {
         if (touch.start <= touch.move) {
             steps.style.transition = "all .0 ease";
-            console.log(Math.floor(touch.move - position))
-            steps.style.bottom = `-${Math.floor((touch.move - position) * 5)}px`;
-            console.log(`-${Math.floor(touch.move - position)}px`)
+            console.log(`-${Math.floor((touch.move - position) - 10)}px`)
+            steps.style.bottom = `-${Math.floor((touch.move - position) * 1)}px`;
         } else {
-            steps.style.transition = ".3s ease";
+            steps.style.transition = ".2s ease";
             steps.style.bottom = `0px`;
         }
     } else {
-        steps.style.transition = ".3s ease"
+        steps.style.transition = ".2s ease";
         steps.style.bottom = `0px`
     }
 
@@ -99,7 +101,7 @@ function swipe(rm) {
             shaodw.style.display = "none";
             document.body.style.overflow = "auto";
         } else {
-            steps.style.transition = ".3s ease"
+            steps.style.transition = ".2s ease"
             steps.style.bottom = `0px`
         }
         touch.go = false;
@@ -114,7 +116,6 @@ window.addEventListener("touchmove", function (e) {
     if (touch.go) {
         swipe()
         touch.move = e.changedTouches[0].clientY;
-
     }
 
 })
