@@ -119,10 +119,10 @@ function swipe(rm) {
 
 window.addEventListener("touchmove", function (e) {
 
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
     if (e.cancelable) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
     }
 
     if (touch.go) {
@@ -132,7 +132,11 @@ window.addEventListener("touchmove", function (e) {
 
 })
 
-document.addEventListener("touchmove", function(e){e.preventDefault()})
+document.addEventListener("touchmove", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+})
 
 window.addEventListener("touchend", function (e) {
 
