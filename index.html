@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="New UI">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>New UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Shadow -->
+    <div class="shadow pf"></div>
+
+    <div class="dashboard">
+
+        <div class="flex ac plus top pr left min-wid">
+            <div class="icon zi-1">
+                <img src="./assets/svg/logog.svg" alt="" srcset="">
+            </div>
+            <h3 class="left pr cgy">SAS Dashboard</h3>
+        </div>
+
+        <!-- Approval card container -->
+        <div class="flex jc plus">
+
+            <!-- Card container -->
+            <div class="card mt_50">
+                <div class="flex ac">
+                    <div class="tex-left">
+                        <h3 class="cgy mtb">Your Approval</h3>
+                        <p class="cop">You'll need to review and approve the artwork.</p>
+                    </div>
+                    <div class="round-card flex ac jc">
+                        <h4>03</h4>
+                    </div>
+                </div>
+                <!-- See progress button -->
+                <div class="flex mtb jr">
+                    <span onclick="show_step(this)" class="cb">See progress</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- You Maybe Interested In Component -->
+        <div class="sugation mt_50 zi_99 bottom">
+
+            <h3 class="intrested-title plus">You Maybe Interested In</h3>
+
+            <!-- Collection -->
+            <div class="collection">
+
+                <div class="flex pop fww jse">
+
+                    <div class="S-card flex fdc">
+                        <div class="S-card-I">
+                            <img width="100%" src="./assets/img/card-1.png" alt="" srcset="">
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="text-area">
+                            <h4 class="cgy mtb">Abstract Poster</h4>
+                            <span class="cop">$25</span>
+                        </div>
+                    </div>
+
+                    <div class="S-card flex fdc">
+                        <div class="S-card-I">
+                            <img width="100%" src="./assets/img/card-3.png" alt="" srcset="">
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="text-area">
+                            <h4 class="cgy mtb">Abstract Poster</h4>
+                            <span class="cop">$25</span>
+                        </div>
+                    </div>
+
+                    <div class="S-card flex fdc">
+                        <div class="S-card-I">
+                            <img width="100%" src="./assets/img/card-2.png" alt="" srcset="">
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="text-area">
+                            <h4 class="cgy mtb">Abstract Poster</h4>
+                            <span class="cop">$25</span>
+                        </div>
+                    </div>
+
+                    <div class="S-card flex fdc">
+                        <div class="S-card-I">
+                            <img width="100%" src="./assets/img/card-7.png" alt="" srcset="">
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="text-area">
+                            <h4 class="cgy mtb">Abstract Poster</h4>
+                            <span class="cop">$25</span>
+                        </div>
+                    </div>
+
+                    <div class="S-card flex fdc">
+                        <div class="S-card-I">
+                            <img width="100%" src="./assets/img/card-4.png" alt="" srcset="">
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="text-area">
+                            <h4 class="cgy mtb">Abstract Poster</h4>
+                            <span class="cop">$25</span>
+                        </div>
+                    </div>
+
+                    <div class="S-card flex fdc">
+                        <div class="S-card-I">
+                            <img width="100%" src="./assets/img/card-5.png" alt="" srcset="">
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="text-area">
+                            <h4 class="cgy mtb">Abstract Poster</h4>
+                            <span class="cop">$25</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Step contianer -->
+        <div class="step down width zi plus pf bottom">
+
+            <!-- Swipe -->
+            <center>
+                <div class="swip"></div>
+            </center>
+
+            <div class="intrested-title plus">STEPS</div>
+
+            <div class="ovx-a width height mb_10 flex fdc ac">
+
+                <!-- Frame -->
+                <div onclick="frame_click(this)" class="frame pr select flex jl ac mtb">
+                    <div>
+                        <span class="ml-10 cgy">Photos Received</span>
+                    </div>
+
+                    <!-- Check mark -->
+                    <div class="icon pa rig_20">
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.454 0.454736C10.6653 0.253569 10.9465 0.142356 11.2382 0.144563C11.53 0.146771 11.8095 0.262226 12.0177 0.466567C12.2259 0.670908 12.3466 0.948152 12.3543 1.2398C12.362 1.53144 12.2562 1.81468 12.059 2.02974L6.07402 9.51474C5.9711 9.62558 5.84689 9.71454 5.70881 9.77629C5.57073 9.83803 5.42162 9.8713 5.27039 9.8741C5.11916 9.8769 4.96892 9.84918 4.82865 9.79259C4.68838 9.73599 4.56096 9.6517 4.45402 9.54474L0.485016 5.57574C0.374486 5.47274 0.285832 5.34854 0.224344 5.21054C0.162856 5.07254 0.129793 4.92357 0.127128 4.77252C0.124463 4.62147 0.15225 4.47142 0.208832 4.33134C0.265413 4.19126 0.34963 4.06401 0.456458 3.95718C0.563287 3.85035 0.690537 3.76613 0.830619 3.70955C0.970702 3.65297 1.12075 3.62518 1.2718 3.62785C1.42285 3.63051 1.57182 3.66358 1.70982 3.72506C1.84782 3.78655 1.97202 3.87521 2.07502 3.98574L5.21602 7.12524L10.4255 0.487736C10.4349 0.476187 10.4449 0.46517 10.4555 0.454736H10.454Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+
+                    <!-- Round Area Number | rm class remove element -->
+                    <div class="rm icon pa rig_10 round-card flex ac jc">
+                        <h3 class="cgy">02</h3>
+                    </div>
+                </div>
+
+                <!-- Frame -->
+                <div onclick="frame_click(this)" class="frame pr select flex jl ac mtb">
+                    <div>
+                        <span class="ml-10 cgy">Proof Ready: 1st of June 2022</span>
+                    </div>
+
+                    <!-- Check mark -->
+                    <div class="icon pa rig_20">
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.454 0.454736C10.6653 0.253569 10.9465 0.142356 11.2382 0.144563C11.53 0.146771 11.8095 0.262226 12.0177 0.466567C12.2259 0.670908 12.3466 0.948152 12.3543 1.2398C12.362 1.53144 12.2562 1.81468 12.059 2.02974L6.07402 9.51474C5.9711 9.62558 5.84689 9.71454 5.70881 9.77629C5.57073 9.83803 5.42162 9.8713 5.27039 9.8741C5.11916 9.8769 4.96892 9.84918 4.82865 9.79259C4.68838 9.73599 4.56096 9.6517 4.45402 9.54474L0.485016 5.57574C0.374486 5.47274 0.285832 5.34854 0.224344 5.21054C0.162856 5.07254 0.129793 4.92357 0.127128 4.77252C0.124463 4.62147 0.15225 4.47142 0.208832 4.33134C0.265413 4.19126 0.34963 4.06401 0.456458 3.95718C0.563287 3.85035 0.690537 3.76613 0.830619 3.70955C0.970702 3.65297 1.12075 3.62518 1.2718 3.62785C1.42285 3.63051 1.57182 3.66358 1.70982 3.72506C1.84782 3.78655 1.97202 3.87521 2.07502 3.98574L5.21602 7.12524L10.4255 0.487736C10.4349 0.476187 10.4449 0.46517 10.4555 0.454736H10.454Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Round Area Number | rm class remove element -->
+                    <div class="rm icon pa rig_10 round-card flex ac jc">
+                        <h3 class="cgy">02</h3>
+                    </div>
+                </div>
+
+                <!-- Card container -->
+                <div class="card mt_50">
+                    <div class="flex ac">
+                        <div class="tex-left">
+                            <h3 class="cgy mtb">Your Approval</h3>
+                            <p class="cop">You'll need to review and approve the artwork.</p>
+                        </div>
+                        <div class="round-card flex ac jc">
+                            <h4>03</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frame -->
+                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                    <div>
+                        <span class="ml-10 cgy">Photos Received</span>
+                    </div>
+
+                    <!-- Check mark -->
+                    <div class="icon pa rig_20">
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.454 0.454736C10.6653 0.253569 10.9465 0.142356 11.2382 0.144563C11.53 0.146771 11.8095 0.262226 12.0177 0.466567C12.2259 0.670908 12.3466 0.948152 12.3543 1.2398C12.362 1.53144 12.2562 1.81468 12.059 2.02974L6.07402 9.51474C5.9711 9.62558 5.84689 9.71454 5.70881 9.77629C5.57073 9.83803 5.42162 9.8713 5.27039 9.8741C5.11916 9.8769 4.96892 9.84918 4.82865 9.79259C4.68838 9.73599 4.56096 9.6517 4.45402 9.54474L0.485016 5.57574C0.374486 5.47274 0.285832 5.34854 0.224344 5.21054C0.162856 5.07254 0.129793 4.92357 0.127128 4.77252C0.124463 4.62147 0.15225 4.47142 0.208832 4.33134C0.265413 4.19126 0.34963 4.06401 0.456458 3.95718C0.563287 3.85035 0.690537 3.76613 0.830619 3.70955C0.970702 3.65297 1.12075 3.62518 1.2718 3.62785C1.42285 3.63051 1.57182 3.66358 1.70982 3.72506C1.84782 3.78655 1.97202 3.87521 2.07502 3.98574L5.21602 7.12524L10.4255 0.487736C10.4349 0.476187 10.4449 0.46517 10.4555 0.454736H10.454Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Round Area Number | rm class remove element -->
+                    <div class="icon pa rig_10 round-card flex ac jc">
+                        <h3 class="cgy">04</h3>
+                    </div>
+                </div>
+
+                <!-- Frame -->
+                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                    <div>
+                        <span class="ml-10 cgy">Revision Requested</span>
+                    </div>
+
+                    <!-- Check mark -->
+                    <div class="icon pa rig_20">
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.454 0.454736C10.6653 0.253569 10.9465 0.142356 11.2382 0.144563C11.53 0.146771 11.8095 0.262226 12.0177 0.466567C12.2259 0.670908 12.3466 0.948152 12.3543 1.2398C12.362 1.53144 12.2562 1.81468 12.059 2.02974L6.07402 9.51474C5.9711 9.62558 5.84689 9.71454 5.70881 9.77629C5.57073 9.83803 5.42162 9.8713 5.27039 9.8741C5.11916 9.8769 4.96892 9.84918 4.82865 9.79259C4.68838 9.73599 4.56096 9.6517 4.45402 9.54474L0.485016 5.57574C0.374486 5.47274 0.285832 5.34854 0.224344 5.21054C0.162856 5.07254 0.129793 4.92357 0.127128 4.77252C0.124463 4.62147 0.15225 4.47142 0.208832 4.33134C0.265413 4.19126 0.34963 4.06401 0.456458 3.95718C0.563287 3.85035 0.690537 3.76613 0.830619 3.70955C0.970702 3.65297 1.12075 3.62518 1.2718 3.62785C1.42285 3.63051 1.57182 3.66358 1.70982 3.72506C1.84782 3.78655 1.97202 3.87521 2.07502 3.98574L5.21602 7.12524L10.4255 0.487736C10.4349 0.476187 10.4449 0.46517 10.4555 0.454736H10.454Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Round Area Number | rm class remove element -->
+                    <div class="icon pa rig_10 round-card flex ac jc">
+                        <h3 class="cgy">05</h3>
+                    </div>
+                </div>
+
+                <!-- Frame -->
+                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                    <div>
+                        <span class="ml-10 cgy">Download Your File</span>
+                    </div>
+
+                    <!-- Check mark -->
+                    <div class="icon pa rig_20">
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.454 0.454736C10.6653 0.253569 10.9465 0.142356 11.2382 0.144563C11.53 0.146771 11.8095 0.262226 12.0177 0.466567C12.2259 0.670908 12.3466 0.948152 12.3543 1.2398C12.362 1.53144 12.2562 1.81468 12.059 2.02974L6.07402 9.51474C5.9711 9.62558 5.84689 9.71454 5.70881 9.77629C5.57073 9.83803 5.42162 9.8713 5.27039 9.8741C5.11916 9.8769 4.96892 9.84918 4.82865 9.79259C4.68838 9.73599 4.56096 9.6517 4.45402 9.54474L0.485016 5.57574C0.374486 5.47274 0.285832 5.34854 0.224344 5.21054C0.162856 5.07254 0.129793 4.92357 0.127128 4.77252C0.124463 4.62147 0.15225 4.47142 0.208832 4.33134C0.265413 4.19126 0.34963 4.06401 0.456458 3.95718C0.563287 3.85035 0.690537 3.76613 0.830619 3.70955C0.970702 3.65297 1.12075 3.62518 1.2718 3.62785C1.42285 3.63051 1.57182 3.66358 1.70982 3.72506C1.84782 3.78655 1.97202 3.87521 2.07502 3.98574L5.21602 7.12524L10.4255 0.487736C10.4349 0.476187 10.4449 0.46517 10.4555 0.454736H10.454Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Round Area Number | rm class remove element -->
+                    <div class="icon pa rig_10 round-card flex ac jc">
+                        <h3 class="cgy">06</h3>
+                    </div>
+                </div>
+
+                <!-- Frame -->
+                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                    <div>
+                        <span class="ml-10 cgy">File Ready For Production</span>
+                    </div>
+
+                    <!-- Check mark -->
+                    <div class="icon pa rig_20">
+                        <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.454 0.454736C10.6653 0.253569 10.9465 0.142356 11.2382 0.144563C11.53 0.146771 11.8095 0.262226 12.0177 0.466567C12.2259 0.670908 12.3466 0.948152 12.3543 1.2398C12.362 1.53144 12.2562 1.81468 12.059 2.02974L6.07402 9.51474C5.9711 9.62558 5.84689 9.71454 5.70881 9.77629C5.57073 9.83803 5.42162 9.8713 5.27039 9.8741C5.11916 9.8769 4.96892 9.84918 4.82865 9.79259C4.68838 9.73599 4.56096 9.6517 4.45402 9.54474L0.485016 5.57574C0.374486 5.47274 0.285832 5.34854 0.224344 5.21054C0.162856 5.07254 0.129793 4.92357 0.127128 4.77252C0.124463 4.62147 0.15225 4.47142 0.208832 4.33134C0.265413 4.19126 0.34963 4.06401 0.456458 3.95718C0.563287 3.85035 0.690537 3.76613 0.830619 3.70955C0.970702 3.65297 1.12075 3.62518 1.2718 3.62785C1.42285 3.63051 1.57182 3.66358 1.70982 3.72506C1.84782 3.78655 1.97202 3.87521 2.07502 3.98574L5.21602 7.12524L10.4255 0.487736C10.4349 0.476187 10.4449 0.46517 10.4555 0.454736H10.454Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+
+                    <!-- Round Area Number | rm class remove element -->
+                    <div class="icon pa rig_10 round-card flex ac jc">
+                        <h3 class="cgy">07</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <br><br><br><br>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

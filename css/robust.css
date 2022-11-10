@@ -1,0 +1,304 @@
+/* Font class Plus */
+.plus {
+    font-family: Plus;
+}
+
+/* Font class Poppins */
+.pop {
+    font-family: Poppins;
+}
+
+/* Flex class */
+.flex {
+    display: flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+}
+
+/* Aligen item center */
+.ac {
+    align-items: center;
+}
+
+/* Justify item center */
+.jc {
+    justify-content: center;
+}
+
+/* Justify content center */
+.jl {
+    justify-content: left;
+}
+
+/* Justify content right */
+.jr {
+    justify-content: right;
+}
+
+/* Justify content space around */
+.jsa {
+    justify-content: space-around;
+}
+
+/* Justify content space between */
+.jsb {
+    justify-content: space-between;
+}
+
+/* Justify content space between */
+.jse {
+    justify-content: space-evenly;
+}
+
+/* Flex direction column */
+.fdc {
+    flex-direction: column;
+}
+
+/* Overflow */
+.ovx-a {
+    height: 100%;
+    overflow-x: scroll;
+}
+
+/* Flex wraper wrap */
+.fww {
+    flex-wrap: wrap;
+}
+
+/* Position Relative */
+.pr {
+    position: relative;
+}
+
+/* Position Absolute */
+.pa {
+    position: absolute;
+}
+
+/* Position Fixed */
+.pf {
+    position: fixed;
+}
+
+/* Min width */
+.min-wid {
+    width: 200px;
+    min-width: 200px;
+}
+
+/* Max heigh */
+.max-hei {
+    max-height: 95px;
+}
+
+.top {
+    top: 20px;
+}
+
+/* Color gray dark */
+.cgy {
+    color: #242B52;
+}
+
+/* Opacity color */
+.cop {
+    color: rgba(36, 43, 82, 0.502);
+}
+
+/* Color blue sky */
+.cb {
+    color: #284EDB;
+}
+
+/* Round card */
+.round-card {
+    width: 42px;
+    height: 42px;
+    padding: 12px;
+    color: #242B52;
+    font-size: 0.8rem;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+}
+
+/* Background white color */
+.bg-w {
+    background: #FFFFFF;
+}
+
+/* Some left side move 26px */
+.left {
+    left: 16px;
+}
+
+/* Right 10px */
+.rig_10 {
+    right: 10px;
+}
+
+/* Rigth 20 */
+.rig_20 {
+    right: 20px;
+}
+
+/* bottom 0 */
+.bottom {
+    bottom: 0;
+}
+
+/* Down class */
+.down {
+    bottom: -100%;
+    transition: all .3s ease;
+}
+
+/* Title */
+.title {
+    gap: 12px;
+    top: 68px;
+    left: 16px;
+    padding: 0px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+}
+
+/* Large text */
+.L-tex {
+    width: 73px;
+    height: 14px;
+    font-weight: 600;
+    font-size: 10.8px;
+    line-height: 14px;
+    font-style: normal;
+}
+
+/* Text align left */
+.tex-left {
+    text-align: left !important;
+}
+
+/* Margin top and bottom */
+.mtb {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mtb_5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mtb_15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Margin top */
+.mt_50 {
+    margin-top: 50px;
+}
+
+/* Margin left */
+.ml-10 {
+    margin-left: 10px;
+}
+
+/* Margin bottom */
+.mb_10 {
+    margin-bottom: 10px;
+}
+
+/* Z index */
+.zi {
+    z-index: 9;
+}
+
+.zi_99 {
+    z-index: 99;
+}
+
+.zi-1 {
+    z-index: -1;
+}
+
+.zi-9 {
+    z-index: -9;
+}
+
+/* Small card */
+.S-card {
+    width: 169px;
+    height: 237px;
+    padding: 16px;
+    min-width: 169px;
+    min-height: 237px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #FAFAFA;
+}
+
+.rm {
+    display: none;
+}
+
+/* Card image */
+.S-card-i {
+    width: 137px;
+    height: 143px;
+    overflow: hidden;
+}
+
+/* Swip */
+.swip {
+    left: 50%;
+    width: 64px;
+    height: 4px;
+    z-index: 999;
+    border-radius: 100px;
+    background: rgba(36, 43, 82, 0.3);
+}
+
+.swip:active {
+    background: rgba(36, 43, 82, 0.63);  
+}
+
+/* width */
+.width {
+    width: 100%;
+}
+
+/* Height */
+.height {
+    height: 100%;
+}
+
+
+.frame {
+    width: 90%;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 359px;
+    line-height: 20px;
+    font-style: normal;
+    padding: 15px 12px;
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+.frame.select {
+    background: #00AB66;
+    color: #FFFFFF !important;
+}
+
+.frame.select span {
+    color: #FFFFFF;
+}
