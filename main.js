@@ -58,6 +58,7 @@ function show_step() {
 
 
 swip.addEventListener("touchstart", function (e) {
+    
     if (e.cancelable) {
         e.preventDefault();
         e.stopPropagation();
@@ -69,8 +70,10 @@ swip.addEventListener("touchstart", function (e) {
 })
 
 swip.addEventListener("touchmove", function (e) {
+    
     if (e.cancelable) {
         e.preventDefault();
+        e.stopPropagation();
     }
 
     touch.move = e.touches[0].clientY;
@@ -115,6 +118,7 @@ window.addEventListener("touchmove", function (e) {
 
     if (e.cancelable) {
         e.preventDefault();
+        e.stopPropagation();
     }
 
     if (touch.go) {
