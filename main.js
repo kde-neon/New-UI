@@ -162,7 +162,7 @@ function swipe(rm) {
 
 window.addEventListener("touchmove", function (e) {
 
-    
+
 
     if (touch.go) {
         swipe()
@@ -190,8 +190,9 @@ window.addEventListener("touchcancill", function (e) {
     swipe(true)
 })
 
-window.addEventListener("beforeunload", function(e){
-    if(touch.go){
+window.addEventListener("beforeunload", function (e) {
+    if (touch.go) {
+        return 0;
         e.preventDefault()
     }
 })
