@@ -262,13 +262,16 @@
     width: 64px;
     height: 4px;
     z-index: 999;
+    border: solid 20px;
     border-radius: 100px;
     background: rgba(36, 43, 82, 0.3);
 }
 
-.swip:active {
+.swip:hover {
+    border-color: red;
     background: rgba(36, 43, 82, 0.63);  
 }
+
 
 /* width */
 .width {
