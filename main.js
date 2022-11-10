@@ -131,9 +131,17 @@ window.addEventListener("touchmove", function (e) {
 window.addEventListener("touchend", function () {
     touch.go = false;
     swipe(true)
+    if (e.cancelable) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
 })
 
 window.addEventListener("touchcancill", function () {
     touch.go = false;
     swipe(true)
+    if (e.cancelable) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
 })
