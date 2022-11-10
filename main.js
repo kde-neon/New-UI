@@ -76,7 +76,7 @@ steps.addEventListener("touchmove", function (e) {
 function swipe(rm) {
     let position = steps.getBoundingClientRect().top
     if (touch.go) {
-        if (touch.start < touch.move) {
+        if (touch.start <= touch.move) {
             steps.style.transition = "none";
             steps.style.transform = `translateY(${Math.floor(touch.move - position)}px)`
         } else {
