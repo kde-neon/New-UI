@@ -115,16 +115,13 @@ function swipe(rm) {
 }
 
 window.addEventListener("touchmove", function (e) {
-
     e.preventDefault();
-    e.stopPropagation();
-
 
     if (touch.go) {
         swipe()
         touch.move = e.changedTouches[0].clientY;
     }
-    return false;
+    return 0;
 
 })
 
@@ -135,7 +132,7 @@ window.addEventListener("touchend", function (e) {
         e.preventDefault();
         e.stopPropagation();
     }
-    return false;
+    return 0;
 })
 
 window.addEventListener("touchcancill", function (e) {
@@ -145,5 +142,5 @@ window.addEventListener("touchcancill", function (e) {
         e.preventDefault();
         e.stopPropagation();
     }
-    return false;
+    return 0;
 })
