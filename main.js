@@ -58,16 +58,19 @@ function show_step() {
 
 
 steps.addEventListener("touchstart", function (e) {
-    // if (e.cancelable) {
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    // }
+    if (e.cancelable) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
 
     touch.go = true;
     touch.start = e.touches[0].clientY;
 })
 
 steps.addEventListener("touchmove", function (e) {
+    if (e.cancelable) {
+        e.preventDefault();
+    }
     touch.move = e.touches[0].clientY;
 })
 
@@ -77,7 +80,7 @@ function swipe(rm) {
     let position = steps.getBoundingClientRect().top
     if (touch.go) {
         if (touch.start <= touch.move) {
-            // steps.style.transition = "none";
+            steps.style.transition = "all .0 ease";
             console.log(Math.floor(touch.move - position))
             steps.style.bottom = `-${Math.floor((touch.move - position) * 5)}px`;
             console.log(`-${Math.floor(touch.move - position)}px`)
