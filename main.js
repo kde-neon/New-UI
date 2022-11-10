@@ -116,10 +116,9 @@ function swipe(rm) {
 
 window.addEventListener("touchmove", function (e) {
 
-    if (e.cancelable) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
+    e.preventDefault();
+    e.stopPropagation();
+ 
 
     if (touch.go) {
         swipe()
@@ -128,7 +127,7 @@ window.addEventListener("touchmove", function (e) {
 
 })
 
-window.addEventListener("touchend", function () {
+window.addEventListener("touchend", function (e) {
     touch.go = false;
     swipe(true)
     if (e.cancelable) {
@@ -137,7 +136,7 @@ window.addEventListener("touchend", function () {
     }
 })
 
-window.addEventListener("touchcancill", function () {
+window.addEventListener("touchcancill", function (e) {
     touch.go = false;
     swipe(true)
     if (e.cancelable) {
