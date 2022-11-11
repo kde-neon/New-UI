@@ -21,6 +21,10 @@
     align-items: center;
 }
 
+.at {
+    align-items: flex-start;
+}
+
 /* Justify item center */
 .jc {
     justify-content: center;
@@ -65,7 +69,7 @@
 /* Overflow */
 .ovx-a {
     height: 100%;
-    overflow-x: scroll;
+    overflow-y: auto;
 }
 
 /* Flex wraper wrap */
@@ -118,6 +122,11 @@
     color: #284EDB;
 }
 
+/* Color whire */
+.cw {
+    color: #FFFFFF;
+}
+
 /* Round card */
 .round-card {
     width: 42px;
@@ -159,10 +168,14 @@
 /* Down class */
 .down {
     bottom: -100% !important;
-    transition: all .3s ease;
+    transition: all .3s ease-in-out;
 }
 
 /* Large screen display none */
+
+.dn {
+    display: none;
+}
 
 @media only screen and (min-width: 651px) {
     .L-dn {
@@ -203,6 +216,11 @@
 /* Text align left */
 .tex-left {
     text-align: left !important;
+}
+
+/* Margin five */
+.m_5 {
+    margin: 5px;
 }
 
 /* Margin top and bottom */
@@ -253,11 +271,10 @@
     z-index: -9;
 }
 
-
+/* Rm for remove element */
 .rm {
     display: none;
 }
-
 
 /* Swip */
 .swip {
@@ -270,10 +287,10 @@
     background: rgba(36, 43, 82, 0.3);
 }
 
+/* On hover swipe */
 .swip:hover {
-    background: rgba(36, 43, 82, 0.63);  
+    background: rgba(36, 43, 82, 0.63);
 }
-
 
 /* width */
 .width {
@@ -305,4 +322,26 @@
 
 .frame.select span {
     color: #FFFFFF;
+}
+
+.btn {
+    order: 0;
+    gap: 14px;
+    flex: none;
+    width: 45%;
+    height: 76px;
+    flex-grow: 0;
+    padding: 16px;
+    cursor: pointer;
+    min-width: 221px;
+    max-width: 449px;
+    border-radius: 12px;
+    background: #284EDB;
+}
+
+@media only screen and (max-width: 651px) {
+    .btn {
+        cursor: default;
+        width: 90% !important;
+    }
 }

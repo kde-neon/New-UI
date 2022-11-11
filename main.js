@@ -35,16 +35,6 @@ function frame_click(e) {
     console.log(step.select)
 }
 
-
-// Mobiel device toush controll
-let touch = {
-    go: false,
-    start: 0,
-    move: 0,
-    end: 0,
-}
-
-
 let swip = document.querySelector(".swip");
 let steps = document.querySelector(".step");
 
@@ -55,90 +45,3 @@ function show_step() {
 }
 
 // swipe areat on stouch and move
-
-
-swip.addEventListener("touchstart", function (e) {
-
-    if (e.cancelable) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-    }
-
-    touch.go = true;
-    touch.start = e.touches[0].clientY;
-
-})
-
-swip.addEventListener("touchmove", function (e) {
-
-    if (e.cancelable) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-    }
-
-    touch.go = true;
-    touch.move = e.touches[0].clientY;
-})
-
-
-// swipe step card on touchscreen device
-function swipe(rm) {
-    let position = steps.getBoundingClientRect().top
-    if (touch.go) {
-        if (touch.start <= touch.move) {
-            steps.style.transition = "";
-            console.log(`-${Math.floor((touch.move - position) - 10)}px`)
-            steps.style.bottom = `-${Math.floor((touch.move - position) * 1)}px`;
-        } else {
-            steps.style.transition = ".2s ease";
-            steps.style.bottom = `0px`;
-        }
-    } else {
-        steps.style.transition = ".2s ease";
-        steps.style.bottom = `0px`
-    }
-
-    if (rm) {
-        if ((touch.start * 3) < touch.move && touch.go === false) {
-            steps.classList.add("down")
-            shaodw.style.display = "none";
-            document.body.style.overflow = "auto";
-        } else {
-            steps.style.transition = ".2s ease"
-            steps.style.bottom = `0px`
-        }
-        touch.go = false;
-        touch.start = 0;
-        touch.move = 0;
-    }
-
-}
-
-
-window.addEventListener("touchmove", function (e) {
-    if (touch.go) {
-        swipe()
-        touch.move = e.changedTouches[0].clientY;
-    }
-})
-
-
-window.addEventListener("touchend", function (e) {
-    touch.go = false;
-    swipe(true)
-
-})
-
-window.addEventListener("touchcancill", function (e) {
-    touch.go = false;
-    swipe(true)
-})
-
-// Diabled rload on mobile device
-window.addEventListener("beforeunload", function (e) {
-    if (touch.go) {
-        return 0;
-    }
-})

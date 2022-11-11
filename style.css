@@ -24,24 +24,6 @@ body {
     margin: 0;
     padding: 0;
     background: #F5F7FB;
-    touch-action: auto;
-    touch-action: none;
-    touch-action: pan-x;
-    touch-action: pan-left;
-    touch-action: pan-right;
-    touch-action: pan-y;
-    touch-action: pan-up;
-    touch-action: pan-down;
-    touch-action: pinch-zoom;
-    touch-action: manipulation;
-    overscroll-behavior: contain;
-
-    /* Global values */
-    touch-action: inherit;
-    touch-action: initial;
-    touch-action: revert;
-    touch-action: revert-layer;
-    touch-action: unset;
 }
 
 
@@ -58,6 +40,37 @@ body {
     align-items: flex-start;
     background: #FFFFFF;
 }
+
+
+/* Aprove image card */
+.aprove {
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 32px 32px 0px 0px;
+}
+
+
+/* vareable */
+
+.aprove-img {
+    width: 91%;
+    max-width: 918px;
+    overflow: hidden;
+    border-radius: 8px;
+    border-radius: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Aprove image button container */
+.aprove-btn-container {
+    width: 91%;
+    max-width: 918px;
+}
+
 
 /* sugation */
 .sugation {
@@ -202,6 +215,16 @@ body {
         width: 256.75px !important;
         align-items: center !important;
         flex-direction: row !important;
+    }
+
+    .aprove {
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    /* Aprove image button contaienr */
+    .aprove-btn-container {
+        flex-direction: row;
     }
 }
 
