@@ -48,7 +48,7 @@
         </div>
 
         <!-- You Maybe Interested In Component -->
-        <div class="dn sugation mt_50 zi_99 bottom">
+        <div class="sugation mt_50 zi_99 bottom">
 
             <h3 class="intrested-title plus">You Maybe Interested In</h3>
 
@@ -140,9 +140,9 @@
         </div>
 
         <!-- Aprove image contianer -->
-        <div class="aprove flex jc ac fdc width height mt_50 zi_99 bottom pop">
+        <div id="approvalCard" class="aprove dn flex jc ac fdc width height mt_50 bottom pop">
 
-            <div class="flex jc pr zi_99 at aprove-img">
+            <div class="flex jc pr at aprove-img">
                 <img width="100%" src="./assets/img/image2.png" alt="Aproval image art"
                     srcset="./assets/img/image2.png">
             </div>
@@ -152,24 +152,38 @@
                 <!-- Button -->
                 <button class="btn m_5 cw white flex ac jc">
                     <span>i’m happy with this </span>
-                    <div class="icon">🎀</div>
+                    <div class="icon">
+                        <svg width="21" height="22" viewBox="0 0 512 512">
+                            <path fill="#fff"
+                                d="M170.718 216.482L141.6 245.6l93.6 93.6 208-208-29.118-29.118L235.2 279.918l-64.482-63.436zM422.4 256c0 91.518-74.883 166.4-166.4 166.4S89.6 347.518 89.6 256 164.482 89.6 256 89.6c15.6 0 31.2 2.082 45.764 6.241L334 63.6C310.082 53.2 284.082 48 256 48 141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208h-41.6z" />
+                        </svg>
+                    </div>
                 </button>
 
                 <!-- Button -->
-                <button class="btn m_5 cw white flex ac jc">
-                    <span>i’m happy with this </span>
-                    <div class="icon">🎀</div>
+                <button class="btn not m_5 cw white flex ac jc">
+                    <span>i need revision</span>
+                    <div class="icon">
+                        <svg width="21" height="22" viewBox="0 0 512 512">
+                            <path fill="#979A9E"
+                                d="M405 136.798L375.202 107 256 226.202 136.798 107 107 136.798 226.202 256 107 375.202 136.798 405 256 285.798 375.202 405 405 375.202 285.798 256z" />
+                        </svg>
+                    </div>
                 </button>
             </div>
 
         </div>
 
         <!-- Step contianer -->
-        <div class="step down width zi plus pf">
+        <div class="step down width zi_99 plus pf">
 
             <!-- Swipe -->
             <div class="L-dn flex ac jc">
-                <div class="swip"></div>
+                <svg id="closeSteps" width="33" height="15" viewBox="0 0 33 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M32.6999 0.974998C32.2028 0.312203 31.2625 0.177903 30.5999 0.675L16.5003 11.2499L2.40008 0.675C1.73728 0.177903 0.79719 0.312403 0.300093 0.974998C-0.197004 1.63769 -0.0626049 2.57799 0.600091 3.07499L15.6004 14.3249C15.8671 14.5249 16.1837 14.6249 16.5004 14.6249C16.817 14.6249 17.1337 14.5249 17.4004 14.3249L32.3999 3.07499C33.0626 2.57799 33.197 1.63779 32.6999 0.974998Z"
+                        fill="#242B52" fill-opacity="0.3" />
+                </svg>
             </div>
 
             <div class="flex S-dn mtb ml-10 ac plus top pr left min-wid">
@@ -186,7 +200,7 @@
             <div class="ovx-a width height mb_10 flex fdc ac">
 
                 <!-- Frame -->
-                <div onclick="frame_click(this)" class="frame pr select flex jl ac mtb">
+                <div onclick="frame_click(this)" class="frame cur pr select flex jl ac mtb">
                     <div>
                         <span class="ml-10 cgy">Photos Received</span>
                     </div>
@@ -208,7 +222,7 @@
                 </div>
 
                 <!-- Frame -->
-                <div onclick="frame_click(this)" class="frame pr select flex jl ac mtb">
+                <div onclick="frame_click(this)" class="frame cur pr select flex jl ac mtb">
                     <div>
                         <span class="ml-10 cgy">Proof Ready: 1st of June 2022</span>
                     </div>
@@ -229,7 +243,7 @@
                 </div>
 
                 <!-- Card container -->
-                <div class="card mtb">
+                <div id="approvalButton" class="card cur mtb">
                     <div class="flex ac">
                         <div class="tex-left">
                             <h3 class="cgy mtb">Your Approval</h3>
@@ -242,7 +256,7 @@
                 </div>
 
                 <!-- Frame -->
-                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                <div onclick="frame_click(this)" class="frame cur pr flex jl ac mtb">
                     <div>
                         <span class="ml-10 cgy">Photos Received</span>
                     </div>
@@ -263,7 +277,7 @@
                 </div>
 
                 <!-- Frame -->
-                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                <div onclick="frame_click(this)" class="frame cur pr flex jl ac mtb">
                     <div>
                         <span class="ml-10 cgy">Revision Requested</span>
                     </div>
@@ -284,7 +298,7 @@
                 </div>
 
                 <!-- Frame -->
-                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                <div onclick="frame_click(this)" class="frame cur pr flex jl ac mtb">
                     <div>
                         <span class="ml-10 cgy">Download Your File</span>
                     </div>
@@ -305,7 +319,7 @@
                 </div>
 
                 <!-- Frame -->
-                <div onclick="frame_click(this)" class="frame pr flex jl ac mtb">
+                <div onclick="frame_click(this)" class="frame cur pr flex jl ac mtb">
                     <div>
                         <span class="ml-10 cgy">File Ready For Production</span>
                     </div>
