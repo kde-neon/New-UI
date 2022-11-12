@@ -81,13 +81,12 @@ body {
 /* Step */
 .step {
     left: 0;
-    bottom: 0;
+    bottom: 0%;
     height: 75vh;
     padding-top: 20px;
     background: #F5F7FB;
     border-radius: 10px 10px 0px 0px;
     transition: all .3s ease;
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 
 /* Intrested Title */
