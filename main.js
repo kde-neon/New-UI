@@ -44,7 +44,6 @@ let closeSteps = document.getElementById("closeSteps");
 function show_step() {
     shaodw.style.display = "block";
     steps.classList.remove("down");
-    document.body.style.overflow = "hidden";
 }
 
 // swipe areat on stouch and move
