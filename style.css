@@ -150,6 +150,7 @@ body {
     /* Dashboard */
     .dashboard {
         display: flex;
+        overflow-x: auto !important;
         align-items: flex-start;
         flex-direction: row-reverse;
         justify-content: flex-start;
